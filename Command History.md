@@ -1,6 +1,6 @@
 az group create --name MidtermProject --location francecentral
 {
-  "id": "/subscriptions/2b8d2f90-ae85-40fa-98c5-bfb792f360c1/resourceGroups/MidtermProject",
+  "id": "/subscriptions/<subscription-id>/resourceGroups/MidtermProject",
   "location": "francecentral",
   "managedBy": null,
   "name": "MidtermProject",
@@ -45,14 +45,14 @@ Retrieving tenants and subscriptions for the selection...
 
 No     Subscription name    Subscription ID                       Tenant
 -----  -------------------  ------------------------------------  ----------------
-[1] *  Azure for Students   2b8d2f90-ae85-40fa-98c5-bfb792f360c1  Yasar University
+[1] *  Azure for Students   <subscription-id>  Yasar University
 
-The default is marked with an *; the default tenant is 'Yasar University' and subscription is 'Azure for Students' (2b8d2f90-ae85-40fa-98c5-bfb792f360c1).
+The default is marked with an *; the default tenant is 'Yasar University' and subscription is 'Azure for Students' (<subscription-id>).
 
 Select a subscription and tenant (Type a number or Enter for no changes):
 
 Tenant: Yasar University
-Subscription: Azure for Students (2b8d2f90-ae85-40fa-98c5-bfb792f360c1)
+Subscription: Azure for Students (<subscription-id>)
 
 [Announcements]
 With the new Azure CLI login experience, you can select the subscription you want to use more easily. Learn more about it and its configuration at https://go.microsoft.com/fwlink/?linkid=2271236
@@ -80,20 +80,20 @@ PS C:\Users\batik> az network vnet create `
       ]
     },
     "enableDdosProtection": false,
-    "etag": "W/\"8ca67655-aa12-48d2-8aa6-5ac59e357bd3\"",
-    "id": "/subscriptions/2b8d2f90-ae85-40fa-98c5-bfb792f360c1/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet",
+    "etag": "W/\"<guid>\"",
+    "id": "/subscriptions/<subscription-id>/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet",
     "location": "francecentral",
     "name": "midterm-vnet",
     "privateEndpointVNetPolicies": "Disabled",
     "provisioningState": "Succeeded",
     "resourceGroup": "MidtermProject",
-    "resourceGuid": "9f9268b6-1ce2-4610-a06f-ac8f7de6fd29",
+    "resourceGuid": "<guid>",
     "subnets": [
       {
         "addressPrefix": "10.0.1.0/24",
         "delegations": [],
-        "etag": "W/\"8ca67655-aa12-48d2-8aa6-5ac59e357bd3\"",
-        "id": "/subscriptions/2b8d2f90-ae85-40fa-98c5-bfb792f360c1/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/vm-subnet",
+        "etag": "W/\"<guid>\"",
+        "id": "/subscriptions/<subscription-id>/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/vm-subnet",
         "name": "vm-subnet",
         "privateEndpointNetworkPolicies": "Disabled",
         "privateLinkServiceNetworkPolicies": "Enabled",
@@ -112,7 +112,7 @@ PS C:\Users\batik> az network vnet show `
 >>   --output table
 EnableDdosProtection    Location       Name          PrivateEndpointVNetPolicies    ProvisioningState    ResourceGroup    ResourceGuid
 ----------------------  -------------  ------------  -----------------------------  -------------------  ---------------  ------------------------------------
-False                   francecentral  midterm-vnet  Disabled                       Succeeded            MidtermProject   9f9268b6-1ce2-4610-a06f-ac8f7de6fd29
+False                   francecentral  midterm-vnet  Disabled                       Succeeded            MidtermProject   <guid>
 PS C:\Users\batik> az network vnet subnet create `
 >>   --resource-group MidtermProject `
 >>   --vnet-name midterm-vnet `
@@ -121,8 +121,8 @@ PS C:\Users\batik> az network vnet subnet create `
 {
   "addressPrefix": "10.0.2.0/24",
   "delegations": [],
-  "etag": "W/\"005ce2b8-8ada-4e09-8e11-f8bfc1b59a06\"",
-  "id": "/subscriptions/2b8d2f90-ae85-40fa-98c5-bfb792f360c1/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/app-subnet",
+  "etag": "W/\"<guid>\"",
+  "id": "/subscriptions/<subscription-id>/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/app-subnet",
   "name": "app-subnet",
   "privateEndpointNetworkPolicies": "Disabled",
   "privateLinkServiceNetworkPolicies": "Enabled",
@@ -138,8 +138,8 @@ PS C:\Users\batik> az network vnet subnet create `
 {
   "addressPrefix": "10.0.3.0/24",
   "delegations": [],
-  "etag": "W/\"0ae3d661-9a72-4e9a-896f-848f8d84236e\"",
-  "id": "/subscriptions/2b8d2f90-ae85-40fa-98c5-bfb792f360c1/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/private-endpoint-subnet",
+  "etag": "W/\"<guid>\"",
+  "id": "/subscriptions/<subscription-id>/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/private-endpoint-subnet",
   "name": "private-endpoint-subnet",
   "privateEndpointNetworkPolicies": "Disabled",
   "privateLinkServiceNetworkPolicies": "Enabled",
@@ -164,8 +164,8 @@ PS C:\Users\batik> az network vnet subnet create `
 {
   "addressPrefix": "10.0.4.0/24",
   "delegations": [],
-  "etag": "W/\"11ad03a4-b843-4ea3-93fb-49ef652e0e76\"",
-  "id": "/subscriptions/2b8d2f90-ae85-40fa-98c5-bfb792f360c1/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/db-subnet",
+  "etag": "W/\"<guid>\"",
+  "id": "/subscriptions/<subscription-id>/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/db-subnet",
   "name": "db-subnet",
   "privateEndpointNetworkPolicies": "Disabled",
   "privateLinkServiceNetworkPolicies": "Enabled",
@@ -265,7 +265,7 @@ PS C:\Users\batik> az postgres flexible-server create `
 >>   --name midterm-postgres `
 >>   --location francecentral `
 >>   --admin-user pgadmin `
->>   --admin-password StrongPassword123! `
+>>   --admin-password <admin-password> `
 >>   --sku-name Standard_B1ms `
 >>   --tier Burstable `
 >>   --version 16 `
@@ -285,15 +285,15 @@ Your server 'midterm-postgres' is using sku 'Standard_B1ms' (Paid Tier). Please 
 Make a note of your password. If you forget, you would have to reset your password with "az postgres flexible-server update -n midterm-postgres -g MidtermProject -p <new-password>".
 Try using 'az postgres flexible-server connect' command to test out connection.
 {
-  "connectionString": "postgresql://pgadmin:StrongPassword123!@midterm-postgres.postgres.database.azure.com/postgres?sslmode=require",
+  "connectionString": "postgresql://pgadmin:<admin-password>@midterm-postgres.postgres.database.azure.com/postgres?sslmode=require",
   "databaseName": "postgres",
   "host": "midterm-postgres.postgres.database.azure.com",
-  "id": "/subscriptions/2b8d2f90-ae85-40fa-98c5-bfb792f360c1/resourceGroups/MidtermProject/providers/Microsoft.DBforPostgreSQL/flexibleServers/midterm-postgres",
+  "id": "/subscriptions/<subscription-id>/resourceGroups/MidtermProject/providers/Microsoft.DBforPostgreSQL/flexibleServers/midterm-postgres",
   "location": "France Central",
-  "password": "StrongPassword123!",
+  "password": "<admin-password>",
   "resourceGroup": "MidtermProject",
   "skuname": "Standard_B1ms",
-  "subnetId": "/subscriptions/2b8d2f90-ae85-40fa-98c5-bfb792f360c1/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/db-subnet",
+  "subnetId": "/subscriptions/<subscription-id>/resourceGroups/MidtermProject/providers/Microsoft.Network/virtualNetworks/midterm-vnet/subnets/db-subnet",
   "username": "pgadmin",
   "version": "16"
 }
