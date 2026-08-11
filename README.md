@@ -1,4 +1,4 @@
-# Azure Private Network Flask
+# Azure Private VNet Flask
 
 A Flask service on Azure with no public data surface. The App Service, the PostgreSQL Flexible
 Server and the Key Vault all sit inside one VNet: the database has no public endpoint and is
